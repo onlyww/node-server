@@ -33,10 +33,10 @@ function staticRoot (staticPath, req, res) {
 
 // 自动生成发文件绝对路径，根据绝对路径读取文件
 // 创建服务器
-console.log(path.join(__dirname, ''))
-// __diename代表当前文件所在的文件目录
+console.log(path.join(__dirname, 'sample'))
+// __diename代表当前文件所在的文件目录,为空则需要再url输入完整路径
 
 var server = http.createServer(function (req, res) {
-  staticRoot(path.join(__dirname, ''), req, res)
+  staticRoot(path.join(__dirname, 'sample'), req, res)
 })
 server.listen(9000)
